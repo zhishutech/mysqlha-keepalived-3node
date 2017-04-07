@@ -1,0 +1,3 @@
+change master to master_host='192.168.11.100', master_port=3309, master_user='repl', master_password='repl4slave',master_auto_position=1 for channel '192_168_11_100_3309';
+change master to master_host='192.168.11.101', master_port=3309, master_user='repl', master_password='repl4slave',master_auto_position=1 for channel '192_168_11_101_3309';
+change master to master_host='192.168.11.102', master_port=3309, master_user='repl', master_password='repl4slave',master_auto_position=1 for channel '192_168_11_102_3309';
