@@ -19,7 +19,15 @@ MySQL 使用 MySQL-5.7.17-x86_64 版本，去官方下载mysql-5.7.17-linux-glib
 
 对应的VIP： 192.168.11.110
 
-**特别提示：  操作系统关闭iptables AND selinux**
+**特别提示:**
+关闭iptables
+chkconfig --del iptables
+/etc/init.d/iptables stop
+
+关闭:selinux
+setenforce 0
+vim /etc/sysconfig/selinux
+SELINUX=permissive 更改为： SELINUX=disabled
 
 ###下载MySQL ：
 
@@ -162,3 +170,6 @@ mysql -h 192.168.11.110 -P 3309 -uwubx -pwubxwubx -e "select @@hostname"
 ```
 
 自已触发一下切换看看能不能完成自动化的切换。
+## 关注知数堂公从号 第一时间参加技术交流
+![知数堂公众号](https://github.com/zhishutech/mysqlha-keepalived-3node/blob/master/zst/zst-wxcode.jpg?raw=true)
+
